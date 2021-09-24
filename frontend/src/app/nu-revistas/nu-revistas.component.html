@@ -1,0 +1,53 @@
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<div class = "barraDeIconos" >
+    <a href="/nuLibros"><i class="fa fa-book"></i></a>
+    <a class="active" href="/nuRevistas"><i class="fa fa-newspaper-o"></i></a>
+  </div>
+
+  <div class="container mb-3 mt-3">
+    <div class="alert alert-primary" role="alert">
+        Revistas Prestadas
+      </div>
+    <table id="revistasPrestadas" class="table table-bordered table-striped" style="width:100%">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Título</th>
+          <th>Edición</th>
+          <th>Frecuencia</th>
+          <th>Temas</th>
+        </tr>
+      </thead>
+    </table>
+  </div>
+
+
+  <div class="modal fade" id="lendConfirm" tabindex="-1" aria-labelledby="exampleModalSmLabel" aria-hidden="true" >
+    <div class="modal-dialog modal-sm" id= "modalDialog">
+      <div class="modal-content" id = "deleteConfirmColor" style="background-color: gray; color: white;">
+        <div class="modal-header">
+          <h5 class="modal-title h4" id="exampleModalSmLabel">¿Pedir esta revista?</h5>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success" data-dismiss="modal">Confirmar</button>
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="giveBackConfirm" tabindex="-1" aria-labelledby="exampleModalSmLabel" aria-hidden="true" >
+    <div class="modal-dialog modal-sm" id= "modalDialog">
+      <div class="modal-content" id = "deleteConfirmColor" style="background-color: gray; color: white;">
+        <div class="modal-header">
+          <h5 class="modal-title h4" id="exampleModalSmLabel">¿Devolver esta revista?</h5>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success" data-dismiss="modal">Confirmar</button>
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+        </div>
+      </div>
+    </div>
+  </div>

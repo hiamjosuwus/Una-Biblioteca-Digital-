@@ -1,0 +1,505 @@
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div id="loginButton">
+           
+  <button type="button" class="btn btn-light"  data-toggle="modal" data-target="#exampleModal">Cerrar Sesion</button>
+  
+</div>
+
+
+<div class = "barraDeIconos">
+    <a href="/users"><i class="fa fa-group"></i></a>
+    <a class="active" href="/libros"><i class="fa fa-book"></i></a>
+    <a href="/revistas"><i class="fa fa-newspaper-o"></i></a>
+  </div>
+
+<div class="container mb-3 mt-3">
+  <table id="example2" class="table table-bordered table-striped" style="width:100%">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Autor</th>
+        <th>Título</th>
+        <th>Descripción</th>
+        <th>Temas</th>
+        <th>Disponibles</th>
+      </tr>
+    </thead>
+   
+  </table>
+</div>
+
+<div class="modal fade" id="deleteConfirm" tabindex="-1" aria-labelledby="exampleModalSmLabel" aria-hidden="true" >
+  <div class="modal-dialog modal-sm" id= "modalDialog">
+    <div class="modal-content" id = "deleteConfirmColor">
+      <div class="modal-header">
+        <h5 class="modal-title h4" id="exampleModalSmLabel">¿Eliminar el libro?</h5>
+      </div>
+      <div class="modal-footer">
+        <a routerLink="/libroDelete"><button type="button" class="btn btn-success" data-dismiss="modal">Confirmar</button></a>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade"  id="addNewBook" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Agregar Libro</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="inputUser" class="sr-only">autor</label>
+            <input type="name" class="form-control" placeholder="Autor" required autofocus>
+          </div>
+          <div class="form-group">
+            <label for="inputLastName" class="sr-only">tittle</label>
+            <input type="tittle" class="form-control" placeholder="Título" required>
+          </div>
+          <div class="form-group">
+            <label for="inputEmail" class="sr-only">edition</label>
+            <input type="edition" class="form-control" placeholder="Edición" required>
+          </div>
+          <div class="form-group">
+            <label for="inputID" class="sr-only">keywords</label>
+            <input type="keywords" class="form-control" placeholder="Palabras Clave" required>
+          </div>
+          <div class="form-group">
+            <label for="themes" class="sr-only">temes</label>
+            <input type="themes" class="form-control" placeholder="Temas" required>
+          </div>
+          <div class="form-group">
+            <label for="copies" class="sr-only">copies</label>
+            <input type="copies" class="form-control" placeholder="No. Copias" required>
+          </div>
+          <div class="form-group">
+            <label for="available" class="sr-only">available</label>
+            <input type="available" class="form-control" placeholder="Disponibles" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="message-text" class="col-form-label">Descripción:</label>
+            <textarea class="form-control" id="message-text"></textarea>
+          </div>
+          
+         
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+            <a routerLink="/libroNew"><button type="button" class="btn btn-primary" data-dismiss="modal">Agregar</button></a>
+          </div>
+        </form>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<!-- ---------------------------------------------------------------------------------------------------------------------- -->
+
+<div class="modal fade"  id="libro1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Don Quijote de la Mancha</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="inputUser" class="sr-only">autor</label>
+            <input type="name" class="form-control" placeholder="Autor" value="Paco Perez" required autofocus>
+          </div>
+          <div class="form-group">
+            <label for="inputLastName" class="sr-only">tittle</label>
+            <input type="tittle" class="form-control" placeholder="Título" value="Don Quijote de la Mancha" required>
+          </div>
+          <div class="form-group">
+            <label for="inputEmail" class="sr-only">edition</label>
+            <input type="edition" class="form-control" placeholder="Edición"  value="1" required>
+          </div>
+          <div class="form-group">
+            <label for="inputID" class="sr-only">keywords</label>
+            <input type="keywords" class="form-control" placeholder="Palabras Clave" value="Cervantes, Paco, El quijote, quijote de la mancha" required>
+          </div>
+          <div class="form-group">
+            <label for="themes" class="sr-only">temes</label>
+            <input type="themes" class="form-control" placeholder="Temas" value="Parodia, Sátira, Farsa, Ficción histórica, Ficción humorística, Novela psicológica, Novela biográfica" required>
+          </div>
+          <div class="form-group">
+            <label for="copies" class="sr-only">copies</label>
+            <input type="copies" class="form-control" placeholder="No. Copias" value="10" required>
+          </div>
+          <div class="form-group">
+            <label for="available" class="sr-only">available</label>
+            <input type="available" class="form-control" placeholder="Disponibles" value="6" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="message-text" class="col-form-label">Descripción:</label>
+            <textarea class="form-control" id="message-text" >Publicada su primera parte con el título de El ingenioso hidalgo don Quijote de la Mancha a comienzos de 1605, es la obra más destacada de la literatura española y una de las principales de la literatura universal.</textarea>
+          </div>
+          
+         
+          <div class="modal-footer">
+              <button type="button" class="btn btn-warning" data-dismiss="modal" data-toggle="modal" data-target="#deleteConfirm">Eliminar</button>
+              <a routerLink="/libroUpdate"><button type="button" class="btn btn-success" data-dismiss="modal">Actualizar</button></a>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+          </div>
+        </form>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<div class="modal fade"  id="libro2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Historia de Dos Ciudades</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="inputUser" class="sr-only">autor</label>
+            <input type="name" class="form-control" placeholder="Autor" value="Charles Dickens" required autofocus>
+          </div>
+          <div class="form-group">
+            <label for="inputLastName" class="sr-only">tittle</label>
+            <input type="tittle" class="form-control" placeholder="Título" value="Historia de dos ciudades" required>
+          </div>
+          <div class="form-group">
+            <label for="inputEmail" class="sr-only">edition</label>
+            <input type="edition" class="form-control" placeholder="Edición"  value="1" required>
+          </div>
+          <div class="form-group">
+            <label for="inputID" class="sr-only">keywords</label>
+            <input type="keywords" class="form-control" placeholder="Palabras Clave" value="Dickens, Charles, ciudades, dos ciudades" required>
+          </div>
+          <div class="form-group">
+            <label for="themes" class="sr-only">temes</label>
+            <input type="themes" class="form-control" placeholder="Temas" value="Novela, Ficción histórica, Crítica social, Novela histórica" required>
+          </div>
+          <div class="form-group">
+            <label for="copies" class="sr-only">copies</label>
+            <input type="copies" class="form-control" placeholder="No. Copias" value="10" required>
+          </div>
+          <div class="form-group">
+            <label for="available" class="sr-only">available</label>
+            <input type="available" class="form-control" placeholder="Disponibles" value="6" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="message-text" class="col-form-label">Descripción:</label>
+            <textarea class="form-control" id="message-text" >La historia se desarrolla en dos países: Inglaterra y Francia, y en las ciudades de Londres y París, respectivamente en la época de los albores de la Revolución francesa.</textarea>
+          </div>
+          
+         
+          <div class="modal-footer">
+              <button type="button" class="btn btn-warning" data-dismiss="modal" data-toggle="modal" data-target="#deleteConfirm">Eliminar</button>
+              <button type="button" class="btn btn-success" data-dismiss="modal">Actualizar</button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+          </div>
+        </form>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<div class="modal fade"  id="libro3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">El Señor de los Anillos</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="inputUser" class="sr-only">autor</label>
+            <input type="name" class="form-control" placeholder="Autor" value="J. R. R. Tolkien" required autofocus>
+          </div>
+          <div class="form-group">
+            <label for="inputLastName" class="sr-only">tittle</label>
+            <input type="tittle" class="form-control" placeholder="Título" value="El señor de los anillos" required>
+          </div>
+          <div class="form-group">
+            <label for="inputEmail" class="sr-only">edition</label>
+            <input type="edition" class="form-control" placeholder="Edición"  value="1" required>
+          </div>
+          <div class="form-group">
+            <label for="inputID" class="sr-only">keywords</label>
+            <input type="keywords" class="form-control" placeholder="Palabras Clave" value="Tolkien, el señor de los anillos, hobbit" required>
+          </div>
+          <div class="form-group">
+            <label for="themes" class="sr-only">temes</label>
+            <input type="themes" class="form-control" placeholder="Temas" value="Novela, Poesía, Alta fantasía, Literatura fantástica, Romance de caballería, Ficción de aventuras, Fantasía heroica" required>
+          </div>
+          <div class="form-group">
+            <label for="copies" class="sr-only">copies</label>
+            <input type="copies" class="form-control" placeholder="No. Copias" value="10" required>
+          </div>
+          <div class="form-group">
+            <label for="available" class="sr-only">available</label>
+            <input type="available" class="form-control" placeholder="Disponibles" value="6" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="message-text" class="col-form-label">Descripción:</label>
+            <textarea class="form-control" id="message-text" >Su historia se desarrolla en la Tercera Edad del Sol de la Tierra Media, un lugar ficticio poblado por hombres y otras razas antropomorfas como los hobbits, los elfos o los enanos, así como por muchas otras criaturas reales y fantásticas.</textarea>
+          </div>
+          
+         
+          <div class="modal-footer">
+              <button type="button" class="btn btn-warning" data-dismiss="modal" data-toggle="modal" data-target="#deleteConfirm">Eliminar</button>
+              <button type="button" class="btn btn-success" data-dismiss="modal">Actualizar</button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+          </div>
+        </form>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<div class="modal fade"  id="libro4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">El Principito</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="inputUser" class="sr-only">autor</label>
+            <input type="name" class="form-control" placeholder="Autor" value="Antoine de Saint-Exupéry" required autofocus>
+          </div>
+          <div class="form-group">
+            <label for="inputLastName" class="sr-only">tittle</label>
+            <input type="tittle" class="form-control" placeholder="Título" value="El principito" required>
+          </div>
+          <div class="form-group">
+            <label for="inputEmail" class="sr-only">edition</label>
+            <input type="edition" class="form-control" placeholder="Edición"  value="1" required>
+          </div>
+          <div class="form-group">
+            <label for="inputID" class="sr-only">keywords</label>
+            <input type="keywords" class="form-control" placeholder="Palabras Clave" value="Principito, el principito, Exupéry" required>
+          </div>
+          <div class="form-group">
+            <label for="themes" class="sr-only">temes</label>
+            <input type="themes" class="form-control" placeholder="Temas" value="Literatura infantil, Fábula, Novela corta, Alegoría, Ficción especulativa, Literatura fantástica, Ficción didáctica" required>
+          </div>
+          <div class="form-group">
+            <label for="copies" class="sr-only">copies</label>
+            <input type="copies" class="form-control" placeholder="No. Copias" value="10" required>
+          </div>
+          <div class="form-group">
+            <label for="available" class="sr-only">available</label>
+            <input type="available" class="form-control" placeholder="Disponibles" value="6" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="message-text" class="col-form-label">Descripción:</label>
+            <textarea class="form-control" id="message-text" >El principito es un cuento poético que viene acompañado de ilustraciones hechas con acuarelas por el mismo Saint-Exupéry.</textarea>
+          </div>
+          
+         
+          <div class="modal-footer">
+              <button type="button" class="btn btn-warning" data-dismiss="modal" data-toggle="modal" data-target="#deleteConfirm">Eliminar</button>
+              <button type="button" class="btn btn-success" data-dismiss="modal">Actualizar</button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+          </div>
+        </form>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<div class="modal fade"  id="libro5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">El Hobbit</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="inputUser" class="sr-only">autor</label>
+            <input type="name" class="form-control" placeholder="Autor" value="J. R. R. Tolkien" required autofocus>
+          </div>
+          <div class="form-group">
+            <label for="inputLastName" class="sr-only">tittle</label>
+            <input type="tittle" class="form-control" placeholder="Título" value="El Hobbit" required>
+          </div>
+          <div class="form-group">
+            <label for="inputEmail" class="sr-only">edition</label>
+            <input type="edition" class="form-control" placeholder="Edición"  value="1" required>
+          </div>
+          <div class="form-group">
+            <label for="inputID" class="sr-only">keywords</label>
+            <input type="keywords" class="form-control" placeholder="Palabras Clave" value="Tolkine, hobbit, el señor de los anillos" required>
+          </div>
+          <div class="form-group">
+            <label for="themes" class="sr-only">temes</label>
+            <input type="themes" class="form-control" placeholder="Temas" value="Novela, Literatura infantil, Épico, Literatura fantástica, Alta fantasía" required>
+          </div>
+          <div class="form-group">
+            <label for="copies" class="sr-only">copies</label>
+            <input type="copies" class="form-control" placeholder="No. Copias" value="10" required>
+          </div>
+          <div class="form-group">
+            <label for="available" class="sr-only">available</label>
+            <input type="available" class="form-control" placeholder="Disponibles" value="4" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="message-text" class="col-form-label">Descripción:</label>
+            <textarea class="form-control" id="message-text" >Es la primera obra que explora el universo mitológico creado por Tolkien y que más tarde se encargarían de definir El Señor de los Anillos y El Silmarillion. Dentro de dicha ficción, el argumento de El hobbit se sitúa en el año 2941 de la Tercera Edad del Sol, y narra la historia del hobbit Bilbo Bolsón, que junto con el mago Gandalf y un grupo de enanos, vive una aventura en busca del tesoro custodiado por el dragón Smaug en la Montaña Solitaria.</textarea>
+          </div>
+          
+          <div class="modal-footer">
+              <button type="button" class="btn btn-warning" data-dismiss="modal" data-toggle="modal" data-target="#deleteConfirm">Eliminar</button>
+              <button type="button" class="btn btn-success" data-dismiss="modal">Actualizar</button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+          </div>
+        </form>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<div class="modal fade"  id="libro6" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Sueño en el pabellón rojo</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="inputUser" class="sr-only">autor</label>
+            <input type="name" class="form-control" placeholder="Autor" value="Cao Xueqin" required autofocus>
+          </div>
+          <div class="form-group">
+            <label for="inputLastName" class="sr-only">tittle</label>
+            <input type="tittle" class="form-control" placeholder="Título" value="Sueño en el pabellón rojo" required>
+          </div>
+          <div class="form-group">
+            <label for="inputEmail" class="sr-only">edition</label>
+            <input type="edition" class="form-control" placeholder="Edición"  value="1" required>
+          </div>
+          <div class="form-group">
+            <label for="inputID" class="sr-only">keywords</label>
+            <input type="keywords" class="form-control" placeholder="Palabras Clave" value="Historia, asia Xueqin, china" required>
+          </div>
+          <div class="form-group">
+            <label for="themes" class="sr-only">temes</label>
+            <input type="themes" class="form-control" placeholder="Temas" value="Novela, Ficción, Saga familiar" required>
+          </div>
+          <div class="form-group">
+            <label for="copies" class="sr-only">copies</label>
+            <input type="copies" class="form-control" placeholder="No. Copias" value="10" required>
+          </div>
+          <div class="form-group">
+            <label for="available" class="sr-only">available</label>
+            <input type="available" class="form-control" placeholder="Disponibles" value="7" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="message-text" class="col-form-label">Descripción:</label>
+            <textarea class="form-control" id="message-text" >Es una obra escrita a mediados del siglo XVIII por Cao Xueqin (en chino: 曹雪芹) durante el reinado de la Dinastía Qing. Es considerada una de las obras maestras de la literatura de China y es una de las cuatro novelas clásicas chinas, y es generalmente reconocida como la cúspide de la narrativa china.</textarea>
+          </div>
+          
+         
+          <div class="modal-footer">
+              <button type="button" class="btn btn-warning" data-dismiss="modal" data-toggle="modal" data-target="#deleteConfirm">Eliminar</button>
+              <button type="button" class="btn btn-success" data-dismiss="modal">Actualizar</button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+          </div>
+        </form>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" id="report" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h4 class="modal-title" id="myLargeModalLabel">Top revistas más prestadas</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Autor</th>
+              <th scope="col">Título</th>
+              <th scope="col">Cantidad Prestada</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>Antoine de Saint-Exupéry</td>
+              <td>El Principito</td>
+              <td>6</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>J. R. R. Tolkien</td>
+              <td>El hobbit</td>
+              <td>4</td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td>J. R. R. Tolkien</td>
+              <td>El señor de los anillos</td>
+              <td>4</td>
+            </tr>
+            <tr>
+              <th scope="row">4</th>
+              <td>Paco Perez</td>
+              <td>Don Quijote de la Mancha</td>
+              <td>4</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+         
+<button id="plusButton" class="btn"><i  data-toggle="modal" data-target="#addNewBook" class="fa fa-plus-square"></i></button>
+<button id="reportButton" class="btn"  data-toggle="modal" data-target="#report"><i class="fa fa-list"></i></button>

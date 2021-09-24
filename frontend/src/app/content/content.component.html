@@ -1,0 +1,62 @@
+
+<div id="loginButton">
+           
+    <button type="button" class="btn btn-light"  data-toggle="modal" data-target="#exampleModal">Iniciar Sesion</button>
+    
+  </div>
+
+
+  <body>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="../../assets/image (3).jpg">
+          </div>
+      </div>
+  </body>
+
+<div class="modal fade modal-sm"  id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Iniciar Sesion</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form #loginForm = "ngForm">
+            <div class="form-group">
+              <label for="recipient-name" class="col-form-label">Usuario:</label>
+              <label for="inputUser" class="sr-only">user</label>
+              <input type="user" id="inputUser" name="usuario" #usuario="ngModel"[(ngModel)]="user.usuario" class="form-control" placeholder="Ingresa tu usuario o correo" required autofocus>
+            </div>
+            <div class="form-group">
+              <label for="message-text" class="col-form-label">Contraseña:</label>
+              <label for="inputPassword" class="sr-only">Ingresa tu contraseña</label>
+    <input type="password" id="inputPassword" name="password" #password="ngModel"[(ngModel)]="user.password" class="form-control" placeholder="Ingresa tu contraseña" required>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+              <button type="button" class="btn btn-primary" data-dismiss="modal" (click)="login(true)">Iniciar</button>
+            </div>
+          </form>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+
+  <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalSmLabel" [ngStyle]="{'display': mdlSampleIsOpen ? 'block' : 'none', 'opacity': 1}" aria-hidden="true" >
+    <div class="modal-dialog modal-sm" id= "modalDialog">
+      <div class="modal-content" id = "exampleModal4Color">
+        <div class="modal-header">
+          <h5 class="modal-title h4" id="exampleModalSmLabel">⚠️ ERROR </h5>
+          <button type="button" class="close" data-dismiss="modal" (click)="login(false)"  aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body"> El usuario no existe, ponerse en contacto con el administrador para solicitar su registro </div>
+      </div>
+    </div>
+  </div>

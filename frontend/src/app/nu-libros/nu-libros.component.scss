@@ -1,0 +1,57 @@
+.barraDeIconos {
+    top: 0;
+    overflow: hidden;
+    //position: -webkit-sticky; 
+    position: relative;
+    width: auto;
+    background-color: darkblue;
+    overflow: auto;
+  }
+  
+  .barraDeIconos a {
+      margin: 7px ;
+      float: left;
+    width: 48.9%;
+    text-align: center;
+    padding: 12px 0;
+    transition: all 0.3s ease;
+    color: rgb(255, 255, 255);
+    font-size: 40px;
+  }
+  
+  .barraDeIconos a:hover {
+    background-color: rgb(26, 1, 37);
+    font-size: 45px;
+  }
+  
+  .barraDeIconos a.active {
+    
+    background-color: rgb(255, 255, 255);
+    color:darkblue;
+  }
+
+
+  #librosPrestados, #librosParaPrestar{
+    color: darkblue;
+    
+  }
+
+  #customtr:nth-child(2n+1){
+    background-color: rgb(236, 209, 255);
+  }
+  #customtr :hover:not(.header) {
+    background-color: rgb(223, 179, 255);
+  }
+
+  .table-bordered td, .table-bordered th {
+    border: 0px solid rgb(255, 255, 255);
+}
+
+.alert-primary {
+    color: #004085;
+    background-color: darkblue;
+    border-color: #b8daff;
+    font-size: 25px;
+    text-align: center;
+    color: white;
+}

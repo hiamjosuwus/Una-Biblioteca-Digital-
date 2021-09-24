@@ -1,0 +1,43 @@
+
+
+#about {
+    color: white;
+    list-style-type: none;
+    overflow: auto;
+  }
+  
+  .footer {
+    padding: 0px;
+    background: rgb(7, 0, 130);
+  }
+  
+  .modal-body img {
+    position: absolute;
+    height: 120px;
+    width: 120px;
+    left:  65%;
+    top: 10%;
+    transform: translate(-4%, -4%);
+  }
+
+  .btn{
+      font-weight: 600;
+      border: 2px solid;
+  }
+
+  .btn-outline.light{
+      color: rgb(19, 36, 167);
+  }
+
+  .btn-secondary{
+      background-color: rgb(40, 35, 126);
+  }
+
+  
+
+  .footer {
+    position: relative;
+left: 0;
+bottom: 0;
+width: 100%;
+}

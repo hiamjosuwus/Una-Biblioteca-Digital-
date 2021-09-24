@@ -1,0 +1,65 @@
+.container{
+    padding: 6%;
+}
+
+#titulo{
+    color: rgb(28, 0, 130);
+    font-family: 'Poppins', sans-serif;
+    font-size: 35px;
+}
+
+#texto{
+    color: rgb(0, 4, 130)  ;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+}
+
+
+#exampleModal{ 
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(2, 0, 130);
+
+}
+
+.img{
+    position: absolute;
+    height: auto;
+    width: auto;
+}
+#exampleModal4Color{ 
+    background-color: rgb(255, 164, 164);
+    
+}
+
+#modalDialog{
+    top: 20%;
+    margin: 0 auto;
+}
+
+
+.btn-primary{
+    background-color: rgb(7, 0, 130);
+}
+
+.btn-light {
+    border-radius: 8px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 8px;
+    color: #fff;
+    background-color: darkblue;
+    border-color: #f8f9fa;
+}
+
+.close{
+    color: rgb(2, 0, 130);
+}
+
+.form-control {
+    background-color:rgb(236, 209, 255);
+    border: 1px solid #0d0082;
+  }

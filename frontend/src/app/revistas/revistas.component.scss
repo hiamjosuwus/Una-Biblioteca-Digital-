@@ -1,0 +1,155 @@
+.barraDeIconos {
+  top: 0;
+  overflow: hidden;
+  //position: -webkit-sticky; 
+  position: relative;
+  width: 100%;
+  background-color: darkblue;
+  overflow: auto;
+}
+
+.barraDeIconos a {
+    margin: 7px ;
+    float: left;
+  width: 32.2%;
+  text-align: center;
+  padding: 12px 0;
+  transition: all 0.3s ease;
+  color: rgb(255, 255, 255);
+  font-size: 40px;
+}
+
+.barraDeIconos a:hover {
+  background-color: rgb(26, 1, 37);
+  font-size: 45px;
+}
+
+.barraDeIconos a.active {
+  
+  background-color: rgb(255, 255, 255);
+  color:darkblue;
+}
+
+#plusButton {
+  background-color: darkblue;
+border: none;
+color: white;
+padding-top: 0;
+padding-bottom: 0;
+padding-left: 1;
+padding-right: 1;
+font-size: 35px;
+cursor: pointer;
+margin: 63px 8px;
+}
+
+#plusButton {
+  border-radius: 8px;
+  position: fixed;
+ right: 0;
+ bottom: 0;
+  }
+
+  #customtr :hover:not(.header) {
+    background-color: rgb(223, 179, 255);
+  }
+
+  #plusButton:hover{
+      transition: all 0.3s ease;
+      font-size: 40px;
+      background-color: rgb(28, 1, 53);
+  }
+
+  #example2{
+    color: darkblue;
+    
+  }
+
+  #customtr:nth-child(2n+1){
+    background-color: rgb(236, 209, 255);
+  }
+
+  .table-bordered td, .table-bordered th {
+    border: 0px solid rgb(255, 255, 255);
+}
+
+
+.custom-control-input:checked~.custom-control-label::before {
+  color: rgb(0, 252, 42);
+  border-color: rgb(185, 87, 255);
+  background-color:darkblue;
+}
+
+.custom-control-label::before {
+border: darkblue solid 1px;
+}
+
+.btn-primary{
+background-color: darkblue;
+}
+
+.btn-light {
+  border-radius: 8px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 8px;
+  color: #fff;
+  background-color: darkblue;
+  border-color: #f8f9fa;
+}
+
+#addNewBook{
+color: darkblue;
+}
+.close{
+color: blue;
+}
+
+.form-control {
+background-color:rgb(236, 209, 255);
+border: 1px solid #4b0082;
+}
+
+#deleteConfirmColor{ 
+  background-color: rgb(255, 164, 164);
+  
+}
+
+#reportButton {
+  background-color: darkblue;
+border: none;
+color: white;
+padding-top: 0;
+padding-bottom: 0;
+padding-left: 1;
+padding-right: 1;
+font-size: 35px;
+cursor: pointer;
+margin: 63px 8px;
+}
+
+#reportButton {
+  border-radius: 8px;
+  position: fixed;
+ left: 0;
+ bottom: 0;
+  }
+
+
+  #reportButton {
+    border-radius: 8px;
+    position: fixed;
+   right: 0;
+   bottom: 0;
+    }
+
+//   .modal {
+//     width : auto;
+//     position : relative;
+// }
+
+
+  
+
+  
